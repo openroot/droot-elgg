@@ -1,0 +1,2 @@
+define("elgg/init",function(require){var Plugin=require('elgg/Plugin');var elgg=require('elgg');var modules=[];var i;for(i=0;i<modules.length;i++){if(modules[i].plugin instanceof Plugin){modules[i].plugin._init();}else{console.error("Boot module boot/"+modules[i].name+" did not return an instance of Plugin (from elgg/Plugin)");}}
+elgg.trigger_hook('init','system');});

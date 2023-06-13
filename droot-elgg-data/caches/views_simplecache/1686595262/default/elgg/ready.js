@@ -1,0 +1,1 @@
+define("elgg/ready",function(require){var elgg=require('elgg');require('elgg/init');elgg.trigger_hook('ready','system');});
